@@ -2,7 +2,7 @@
   <span class="menu__lines"></span>
   <p class="menu__name">Меню</p>
 </div>
-<div class="menu">
+<div id="menu" class="menu">
   <ul class="menu__content">
     <li class="menu__content-col menu__nav">
       <h2 class="menu__content-header menu__nav-header">Навигация</h3>

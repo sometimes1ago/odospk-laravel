@@ -19,8 +19,13 @@
         <img src="{{URL('/img/landing/illustrations/offer-img.png')}}" class="ad:order-1 lg:order-2 ad:w-full ad:h-[280px] ph:w-[380px] ph:h-[310px] tb:w-[700px] tb:h-[500px] lg:w-[760px] lg:h-[520px] md:w-[890px] md:h-[600px] xl:w-[1040px] xl:h-[710px] dark:brightness-90" alt="Offer img">
       </div>
   </header>
-  <section id="about">
-
+  <section id="about" class="w-full ad:px-16 bt:px-24 lg:px-32 tb:mt-[60px] lg:mt-48 lg:mb-48 md:mt-56 md:mb-56 xl:mb-[80px] flex flex-col items-center justify-center">
+    <h2 class="tb:text-36 md:text-48 xl:text-52 font-bold tracking-tight dark:text-light-400">Кто мы и чем занимаемся</h2>
+    <p class="ad:mt-12 md:mt-16 tb:w-[625px] lg:w-[730px] md:w-[812px] xl:w-[900px] text-18 md:text-20 xl:text-22 text-black-800 text-center leading-tight dark:text-light-900">Мы распологаем большим выбором программ обучения, среди которых обязательно найдется нужная именно Вам! Все программы реализуются в нашем колледже под руководством наставников с многолетним опытом работы</p>
+    <div class="gallery-slider tb:mt-48 md:mt-56 xl:mt-64 bg-light-500 lg:rounded-32 mdx:rounded-36 xl:rounded-48 shadow-slider">
+      <img class="gallery-slider__item dark:brightness-90" src="{{URL('/img/landing/gallery/gallery-img.png')}}" alt="Gallery Slider Item" loading="lazy">
+      <img class="gallery-slider__item dark:brightness-90" src="{{URL('/img/landing/gallery/gallery-img.png')}}" alt="Gallery Slider Item" loading="lazy">
+    </div>
   </section>
   <section id="cources"></section>
   <section id="feedbacks"></section>
@@ -29,5 +34,7 @@
   <script src="{{asset('/js/app.js')}}"></script>
   <script src="{{asset('/js/jquery.min.js')}}"></script>
   <script src="{{asset('/js/burger.js')}}"></script>
+  <script src="{{asset('/js/scriptSlick.js')}}"></script>
+  <script src="{{asset('/js/slick.min.js')}}"></script>
 </body>
 </html>

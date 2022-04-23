@@ -9,12 +9,14 @@ function startMenu() {
     lines.toggleClass('menu__lines-active');
     menu.toggleClass('menu__active');
     overlay.toggleClass('menu__overlay-active');
+    toggleBody(menu);
   });
 
   overlay.bind('click', () => {
     lines.toggleClass('menu__lines-active');
     menu.toggleClass('menu__active');
     overlay.toggleClass('menu__overlay-active');
+    toggleBody(menu);
   });
 
   $.each(links, (index, link) => {
@@ -22,13 +24,16 @@ function startMenu() {
       lines.toggleClass('menu__lines-active');
       menu.toggleClass('menu__active');
       overlay.toggleClass('menu__overlay-active');
+      toggleBody(menu);
     });
   });
 
-  if ($(menu).hasClass('menu__active')) {
-    $('body').css('overflow-y', 'hidden');
-  } else {
-    $('body').css('overflow-y', 'visible');
+  function toggleBody(selector) {
+    if ($(selector).hasClass('menu__active')) {
+      $('body').css('overflow-y', 'hidden');
+    } else {
+      $('body').css('overflow-y', 'visible');
+    }
   }
 }
 

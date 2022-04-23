@@ -5,4 +5,4 @@ mix.js('resources/js/app.js', 'public/js')
     require('tailwindcss'),
 ]);
 
-mix.sass('resources/sass/burger.scss', 'public/css');
+mix.sass('resources/sass/slick.scss', 'public/css');
