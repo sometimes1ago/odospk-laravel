@@ -1,14 +1,16 @@
 .menu {
   display: none;
-  width: 100vw;
-  height: 100vh;
 }
 .menu__active {
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  overflow-y: scroll;
+  transition: all 0.3s ease 0s;
   background-color: #fafafa;
 }
 .menu__button {
@@ -33,7 +35,7 @@
   line-height: 18px;
 }
 .menu__content {
-  width: 1280px;
+  width: 95%;
   display: flex;
   padding: 24px;
   border-radius: 16px;
@@ -74,6 +76,9 @@
 .menu__help-item {
   margin-top: 24px;
 }
+.menu__help-modal-start {
+  display: none;
+}
 .menu__list-contacts {
   display: flex;
   justify-content: space-between;
@@ -110,6 +115,7 @@
   outline-style: solid;
 }
 .menu__lines, .menu__lines::before, .menu__lines::after {
+  width: 24px;
   height: 3px;
   position: absolute;
   border-radius: 10px;
@@ -124,25 +130,26 @@
 }
 .menu__lines::before {
   top: -7px;
-  width: 36px;
   content: "";
 }
 .menu__lines::after {
   top: 7px;
-  width: 32px;
   content: "";
 }
 .menu__lines-active {
+  transition: all 0.3s ease 0s;
   background-color: transparent;
 }
 .menu__lines-active::before {
   top: 0;
   width: 24px;
+  transition: all 0.3s ease 0s;
   transform: rotate(45deg);
 }
 .menu__lines-active::after {
   top: 0;
   width: 24px;
+  transition: all 0.3s ease 0s;
   transform: rotate(-45deg);
 }
 .menu__name {
@@ -171,7 +178,16 @@
 
 @media screen and (max-width: 768px) {
   .menu {
-    width: 338px;
+    display: none;
+  }
+  .menu__active {
+    top: 0;
+    left: 0;
+    width: 336px;
+    position: fixed;
+    display: block;
+    z-index: 1;
+    background-color: #fafafa;
   }
   .menu__button {
     left: 24px;
@@ -191,8 +207,12 @@
   .menu__help {
     width: 266px;
     padding: 12px;
+    margin-top: 32px;
     border-radius: 12px;
     background-color: #EAEAEA;
+  }
+  .menu__help-header {
+    font-size: 20px;
   }
   .menu__list-contacts {
     display: flex;
@@ -204,7 +224,6 @@
     margin-left: 0;
   }
   .menu__list-socials {
-    display: flex;
     margin-top: 16px;
   }
   .menu__link-header {
@@ -215,8 +234,11 @@
     margin-bottom: 24px;
   }
   .menu__link-item:last-child {
-    display: none;
+    display: block;
     margin-bottom: 0;
+  }
+  .menu__link-item:hover {
+    outline: none;
   }
   .menu__name {
     margin-left: 4vw;
@@ -225,18 +247,121 @@
     display: none;
   }
   .menu__socials {
-    margin-top: 42px;
+    margin-top: 32px;
   }
-  .menu__socials-item {
-    margin-right: 16px;
+  .menu__overlay-active {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  .menu__socials-item:last-child {
-    margin-right: 0;
+}
+@media screen and (max-width: 620px) {
+  .menu__active {
+    width: 298px;
   }
-  .menu__socials-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
+  .menu__button {
+    left: 16px;
+  }
+  .menu__content {
+    padding: 16px;
+    margin-top: 64px;
+  }
+  .menu__content-header {
+    font-size: 20px;
+  }
+  .menu__help {
+    width: 256px;
+    padding: 12px;
+    margin-top: 32px;
+    border-radius: 12px;
+    background-color: #EAEAEA;
+  }
+  .menu__help-header {
+    font-size: 20px;
+  }
+  .menu__help-subhead {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .menu__help-form {
+    margin-top: 0;
+  }
+  .menu__help-inputs {
+    display: none;
+  }
+  .menu__help-checkbox {
+    display: none;
+  }
+  .menu__help-sender {
+    display: none;
+  }
+  .menu__help-modal-start {
+    display: block;
+  }
+  .menu__list-links {
+    margin-top: 24px;
+    margin-left: 0;
+  }
+  .menu__list-socials {
+    margin-top: 12px;
+  }
+  .menu__link-header {
+    font-size: 22px;
+  }
+  .menu__link-item {
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  .menu__name {
+    margin-left: 32px;
+  }
+  .menu__socials {
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .menu__active {
+    width: 270px;
+  }
+  .menu__help {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .menu__help-header {
+    font-size: 18px;
+  }
+  .menu__help-form {
+    margin-top: 0;
+  }
+  .menu__help-inputs {
+    display: none;
+  }
+  .menu__help-checkbox {
+    display: none;
+  }
+  .menu__help-sender {
+    display: none;
+  }
+  .menu__help-modal-start {
+    display: block;
+  }
+  .menu__link-header {
+    font-size: 18px;
+  }
+  .menu__link-description {
+    font-size: 14px;
+  }
+  .menu__link-item {
+    margin-bottom: 16px;
+  }
+  .menu__name {
+    margin-left: 32px;
+  }
+  .menu__socials {
+    margin-top: 24px;
   }
 }
 /*
@@ -794,6 +919,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .overflow-hidden {
   overflow: hidden;
 }
+.rounded-16 {
+  border-radius: 16px;
+}
 .rounded-8 {
   border-radius: 8px;
 }
@@ -840,6 +968,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+.px-24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .py-\[17px\] {
   padding-top: 17px;
   padding-bottom: 17px;
@@ -864,6 +1000,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-semibold {
   font-weight: 600;
 }
+.font-bold {
+  font-weight: 700;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -879,9 +1018,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tracking-wider {
   letter-spacing: 0.05em;
 }
+.-tracking-wide {
+  letter-spacing: -0.025em;
+}
 .text-black-900 {
   --tw-text-opacity: 1;
   color: rgb(37 37 37 / var(--tw-text-opacity));
+}
+.text-black-800 {
+  --tw-text-opacity: 1;
+  color: rgb(96 96 96 / var(--tw-text-opacity));
 }
 .text-light-400 {
   --tw-text-opacity: 1;
@@ -898,6 +1044,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-btn:hover {
+  --tw-shadow:  0px 4px 16px rgba(51, 112, 202, 0.48);
+  --tw-shadow-colored: 0px 4px 16px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -919,22 +1071,250 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(205 205 205 / var(--tw-text-opacity));
 }
 
-@media (min-width: 1300px) {
+.dark .dark\:text-light-400 {
+  --tw-text-opacity: 1;
+  color: rgb(254 254 254 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-light-800 {
+  --tw-text-opacity: 1;
+  color: rgb(208 208 208 / var(--tw-text-opacity));
+}
+
+.dark .dark\:brightness-90 {
+  --tw-brightness: brightness(.9);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (min-width: 340px) {
+
+  .ad\:order-2 {
+    order: 2;
+  }
+
+  .ad\:order-1 {
+    order: 1;
+  }
+
+  .ad\:mt-\[80px\] {
+    margin-top: 80px;
+  }
+
+  .ad\:mt-12 {
+    margin-top: 12px;
+  }
+
+  .ad\:mt-16 {
+    margin-top: 16px;
+  }
+
+  .ad\:mt-24 {
+    margin-top: 24px;
+  }
+
+  .ad\:flex {
+    display: flex;
+  }
+
+  .ad\:h-\[235px\] {
+    height: 235px;
+  }
+
+  .ad\:h-\[280px\] {
+    height: 280px;
+  }
+
+  .ad\:w-\[290px\] {
+    width: 290px;
+  }
+
+  .ad\:w-full {
+    width: 100%;
+  }
+
+  .ad\:flex-col {
+    flex-direction: column;
+  }
+
+  .ad\:pl-8 {
+    padding-left: 8px;
+  }
+
+  .ad\:pl-12 {
+    padding-left: 12px;
+  }
+
+  .ad\:text-32 {
+    font-size: 32px;
+  }
+
+  .ad\:text-16 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 410px) {
+
+  .ph\:mt-36 {
+    margin-top: 36px;
+  }
+
+  .ph\:h-\[310px\] {
+    height: 310px;
+  }
+
+  .ph\:w-\[390px\] {
+    width: 390px;
+  }
+
+  .ph\:w-\[290px\] {
+    width: 290px;
+  }
+
+  .ph\:w-\[380px\] {
+    width: 380px;
+  }
+
+  .ph\:text-36 {
+    font-size: 36px;
+  }
+
+  .ph\:text-18 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 740px) {
+
+  .tb\:mt-24 {
+    margin-top: 24px;
+  }
+
+  .tb\:h-\[500px\] {
+    height: 500px;
+  }
+
+  .tb\:w-\[470px\] {
+    width: 470px;
+  }
+
+  .tb\:w-\[700px\] {
+    width: 700px;
+  }
+
+  .tb\:w-\[320px\] {
+    width: 320px;
+  }
+
+  .tb\:items-center {
+    align-items: center;
+  }
+
+  .tb\:pl-0 {
+    padding-left: 0px;
+  }
+
+  .tb\:text-center {
+    text-align: center;
+  }
+
+  .tb\:text-52 {
+    font-size: 52px;
+  }
+
+  .tb\:text-18 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .lg\:order-1 {
+    order: 1;
+  }
+
+  .lg\:order-2 {
+    order: 2;
+  }
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-\[520px\] {
+    height: 520px;
+  }
+
+  .lg\:w-\[498px\] {
+    width: 498px;
+  }
+
+  .lg\:w-\[760px\] {
+    width: 760px;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 
   .lg\:px-8 {
     padding-left: 8px;
     padding-right: 8px;
   }
+
+  .lg\:pl-32 {
+    padding-left: 32px;
+  }
+
+  .lg\:text-left {
+    text-align: left;
+  }
+
+  .lg\:text-16 {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1580px) {
 
+  .md\:mt-\[100px\] {
+    margin-top: 100px;
+  }
+
+  .md\:mt-32 {
+    margin-top: 32px;
+  }
+
+  .md\:mt-48 {
+    margin-top: 48px;
+  }
+
+  .md\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .md\:w-\[592px\] {
+    width: 592px;
+  }
+
+  .md\:w-\[890px\] {
+    width: 890px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:rounded-16 {
+    border-radius: 16px;
   }
 
   .md\:border-t-0 {
@@ -943,5 +1323,48 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:border-l {
     border-left-width: 1px;
+  }
+
+  .md\:text-64 {
+    font-size: 64px;
+  }
+
+  .md\:text-20 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1900px) {
+
+  .xl\:mt-\[128px\] {
+    margin-top: 128px;
+  }
+
+  .xl\:h-\[710px\] {
+    height: 710px;
+  }
+
+  .xl\:w-\[750px\] {
+    width: 750px;
+  }
+
+  .xl\:w-\[573px\] {
+    width: 573px;
+  }
+
+  .xl\:w-\[1040px\] {
+    width: 1040px;
+  }
+
+  .xl\:pl-48 {
+    padding-left: 48px;
+  }
+
+  .xl\:text-82 {
+    font-size: 82px;
+  }
+
+  .xl\:text-22 {
+    font-size: 22px;
   }
 }

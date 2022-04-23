@@ -125,7 +125,7 @@ module.exports = {
       ad: '340px',
       ph: '410px',
       tb: '740px',
-      lg: '1300px',
+      lg: '1200px',
       md: '1580px',
       xl: '1900px',
     }
