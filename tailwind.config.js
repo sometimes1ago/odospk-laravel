@@ -126,8 +126,8 @@ module.exports = {
       ph: '410px',
       tb: '620px',
       lg: '1200px',
-      md: '1580px',
-      xl: '1900px',
+      md: '1460px',
+      xl: '1780px',
     }
   },
   plugins: [
