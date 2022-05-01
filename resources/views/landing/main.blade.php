@@ -68,177 +68,147 @@
     <h2 class="lg:mt-48 lg:text-36 md:text-48 xl:text-52 font-bold tracking-tight dark:text-light-400">Наши курсы и программы</h2>
     <p class="lg:mt-12 md:mt-16 lg:w-[617px] md:w-[689px] xl:w-[755px] text-18 md:text-20 xl:text-22 text-black-800 text-center leading-tight dark:text-light-800">Список наших программ обучения, по которым вы можете получить дополнительное образование, профессиональную подготовку 
       или повысить квалификацию</p>
-    <div class="w-full lg:mt-48 lg:p-16 mdx:p-20 bg-light-700 lg:rounded-28 mdx:rounded-32 dark:bg-dark-800">
-      <div class="w-full flex items-center justify-between">
+    <div class="w-full lg:mt-48 lg:p-16 md:p-20 bg-light-700 lg:rounded-28 md:rounded-32 dark:bg-dark-800">
+      <div class="w-full flex items-end justify-between">
         <div>
           <h3 class="lg:block lg:text-24 md:text-32 font-bold dark:text-light-400 tracking-tight">Отфильтровано с заботой</h3>
           <p class="lg:mt-8 lg:text-16 md:text-20 leading-tight tracking-tight text-black-800 dark:text-light-800">Специально для Вас фильтры с быстрой <br> выборкой курсов и программ</p>
         </div>
-        <ul class="flex items-center">
-          <li class="selector__item flex flex-col lg:mr-24 mdx:mr-36">
-            <p class="lg:text-18 font-bold mdx:text-24 dark:text-light-400">Срок обучения:</p>
-            <div class="selector__select-wrap relative lg:w-[193px] mdx:w-[228px] cursor-pointer" data-index="0">
-              <div class="selector__select py-[15px] mdx:py-[18px] xl:py-[22px] bg-light-500 border border-light-800">
-                <p class="selector__value lg:text-16 mdx:text-18 dark:text-light-400" data-educationLenght="any">Любой</p>
-                <svg class="mt-[1px] w-[11px] h-[10px]" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path class="dark:fill-light-400"
-                    d="M7.16448 8.00143C6.37292 9.18965 4.62708 9.18966 3.83552 8.00143L1.07583 3.85883C0.190385
-                    2.52968 1.14323 0.75 2.74031 0.75L8.25969 0.75C9.85677 0.75 10.8096 2.52968 9.92417 3.85883L7.16448 8.00143Z"
-                    fill="#252525"
-                  />
+        <div class="dropdowns w-fit flex items-center justify-between">
+          <div class="dropdown__container w-[200px] flex flex-col items-start mr-24 z-10">
+            <label class="dropdown__label mb-12 text-18 font-bold" data-dropdownIndex="0">Срок обучения</label>
+            <div class="dropdown dropdown__light" data-index="0">
+              <div class="dropdown__btn">
+                <p class="dropdown__btn-text" data-dropdownValue="Любой">Любой</p>
+                <svg class="dropdown__btn-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M6.73205 8C5.96225 9.33333 4.03775 9.33333 3.26795 8L0.669873 3.5C-0.0999277 2.16667 0.862323 0.5 2.40192 0.5L7.59808 0.5C9.13768 0.5 10.0999 2.16667 9.33013 3.5L6.73205 8Z" fill="#252525"/>
                 </svg>
               </div>
-              <ul class="selector__options">
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-educationLenght="any">Любой</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-educationLenght="1">1 месяц</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-educationLenght="2">2 месяца</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-educationLenght="3">3 месяца</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-educationLenght="4">4 месяца</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-educationLenght="5">5 месяцев</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-educationLenght="6">Полгода</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-educationLenght="12">Год</p>
-                </li>
+              <ul class="dropdown__options">
+                <li class="dropdown__option">Любая</li>
+                <li class="dropdown__option">1 месяц</li>
+                <li class="dropdown__option">2 месяца</li>
+                <li class="dropdown__option">3 месяца</li>
+                <li class="dropdown__option">4 месяца</li>
+                <li class="dropdown__option">5 месяца</li>
+                <li class="dropdown__option">Полгода</li>
+                <li class="dropdown__option">Год</li>
               </ul>
             </div>
-          </li>
-          <li class="selector__item flex flex-col lg:mr-24 mdx:mr-36">
-            <p class="text-18 font-bold mdx:text-24 dark:text-light-400">Выдаваемый документ:</p>
-            <div class="selector__select-wrap relative lg:w-[213px] mdx:w-[283px] cursor-pointer" data-index="1">
-              <div class="selector__select py-[15px] mdx:py-[18px] xl:py-[22px] bg-light-500 border border-light-800">
-                <p class="selector__value lg:text-16 mdx:text-18 dark:text-light-400" data-diplomaType="any">Любой</p>
-                <svg class="mt-[1px] w-[11px] h-[10px]" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path class="dark:fill-light-400"
-                    d="M7.16448 8.00143C6.37292 9.18965 4.62708 9.18966 3.83552 8.00143L1.07583 3.85883C0.190385
-                    2.52968 1.14323 0.75 2.74031 0.75L8.25969 0.75C9.85677 0.75 10.8096 2.52968 9.92417 3.85883L7.16448 8.00143Z"
-                    fill="#252525"
-                  />
+          </div>
+          <div class="dropdown__container w-[215px] flex flex-col items-start mr-24 z-10">
+            <label class="dropdown__label mb-12 text-18 font-bold" data-dropdownIndex="1">Выдаваемый документ</label>
+            <div class="dropdown dropdown__light" data-index="1">
+              <div class="dropdown__btn">
+                <p class="dropdown__btn-text" data-dropdownValue="Любой">Любой</p>
+                <svg class="dropdown__btn-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M6.73205 8C5.96225 9.33333 4.03775 9.33333 3.26795 8L0.669873 3.5C-0.0999277 2.16667 0.862323 0.5 2.40192 0.5L7.59808 0.5C9.13768 0.5 10.0999 2.16667 9.33013 3.5L6.73205 8Z" fill="#252525"/>
                 </svg>
               </div>
-              <ul class="selector__options">
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-diplomaType="any">Любой</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-diplomaType="certificate">Сертификат</p>
-                </li>
-                <li class="selector__options_item">
-                  <p class="selector__options_value" data-diplomaType="diploma">Свидетельство</p>
-                </li>
+              <ul class="dropdown__options">
+                <li class="dropdown__option">Любой</li>
+                <li class="dropdown__option">Сертификат</li>
+                <li class="dropdown__option">Свидетельство</li>
               </ul>
             </div>
-          </li>
-          <li class="flex flex-col">
-            <label class="lg:text-18 mdx:text-24 font-bold dark:text-light-400" for="priceInput">Стоимость до:</label>
-            <input class="input lg:text-16 mdx:text-18 lg:w-[193px] mdx:w-[228px] py-[11px] mdx:py-[18px] xl:py-[20px] bg-light-500 border-light-800 dark:bg-dark-700 dark:text-light-800 dark:border-none" type="text" placeholder="10000 ₽" maxlength="6">
-          </li>
-        </ul>
+          </div>
+          <div class="filter__input flex flex-col items-start w-[200px]">
+            <label for="clientName" class="lg:text-18 mb-12 font-bold">Стоимость</label>
+            <input type="text" id="clientName" class="w-full text-14 px-12 py-[14.5px] xl:py-16 xl:text-16 xl:mt-16 border outline-brand-900 outline-2 rounded-12 border-light-900 bg-light-400 placeholder:text-black-800" placeholder="Иван Иванов" required>
+          </div>
+        </div>
       </div>
       <div class="w-full lg:mt-36 flex lg:items-start lg:justify-between relative">
         <div class="courses-list relative ad:w-full lg:w-1/2 lg:mr-24 overflow-y-scroll no-scrollbar">
-          <h4 class="lg:text-20 mdx:text-24 font-bold dark:text-light-400 tracking-tight">Курсы</h4>
-          <ul class="w-full lg:mt-12 mdx:mt-16">
-            <li class="course-item">1С Предприятие 8.2, 8.3</li>
-            <li class="course-item__active course-item">Комбинированный маникюр и дизайн ногтей</li>
-            <li class="course-item">Оформление и окрашивание бровей</li>
-            <li class="course-item">Раскрой и пошив одежды</li>
-            <li class="course-item">Художественная сварка</li>
-            <li class="course-item">Цифровая фотография</li>
+          <h4 class="lg:text-20 md:text-24 font-bold dark:text-light-400 tracking-tight">Курсы</h4>
+          <ul class="w-full lg:mt-12 md:mt-16">
+            <li class="course__item">1С Предприятие 8.2, 8.3</li>
+            <li class="course__item-active course__item">Комбинированный маникюр и дизайн ногтей</li>
+            <li class="course__item">Оформление и окрашивание бровей</li>
+            <li class="course__item">Раскрой и пошив одежды</li>
+            <li class="course__item">Художественная сварка</li>
+            <li class="course__item">Цифровая фотография</li>
           </ul>
-          <h4 class="lg:mt-24 lg:text-20 mdx:text-24 font-bold dark:text-light-400 tracking-tight">Профессиональная подготовка</h4>
-          <ul class="courses w-full lg:mt-12 mdx:mt-16">
-            <li class="course-item">Помощник машиниста электропоезда</li>
-            <li class="course-item">Проводник пассажирского вагона</li>
-            <li class="course-item">Сварщик ручной дуговой сварки плавящимся электродом</li>
-            <li class="course-item">Художественная сварка</li>
-            <li class="course-item">Цифровая фотография</li>
+          <h4 class="lg:mt-24 lg:text-20 md:text-24 font-bold dark:text-light-400 tracking-tight">Профессиональная подготовка</h4>
+          <ul class="courses w-full lg:mt-12 md:mt-16">
+            <li class="course__item">Помощник машиниста электропоезда</li>
+            <li class="course__item">Проводник пассажирского вагона</li>
+            <li class="course__item">Сварщик ручной дуговой сварки плавящимся электродом</li>
+            <li class="course__item">Художественная сварка</li>
+            <li class="course__item">Цифровая фотография</li>
           </ul>
         </div>
         <div class="gradient-hidder__courses w-1/2 lg:h-64 absolute left-0 bottom-0"></div>
-        <div class="course-description lg:w-1/2 lg:p-16 mdx:p-20 xl:p-24 bg-light-500 rounded-20 mdx:rounded-24 xl:rounded-28 border border-light-900 dark:bg-dark-700 dark:border-none">
-          <h3 class="lg:text-32 mdx:text-36 xl:text-48 font-bold tracking-tight dark:text-light-400">Комбинированный маникюр и дизайн ногтей</h3>
-          <div class="course-initial lg:pr-36 mdx:pr-[84px] xl:pr-[120px]">
-            <ul class="text-content lg:mt-24 mdx:mt-32 xl:mt-36">
-              <li class="lg:text-18 mdx:text-20 xl:text-22 text-text-800 leading-tighter dark:text-light-800">
-                <span class="lg:text-20 mdx:text-24 xl:text-28 text-text-900 font-bold leading-none dark:text-light-400">Срок обучения: </span>
+        <div class="course-description z-0 lg:w-1/2 lg:p-16 md:p-20 xl:p-24 bg-light-500 rounded-20 md:rounded-24 xl:rounded-28 border border-light-900 dark:bg-dark-700 dark:border-none">
+          <h3 class="lg:text-32 md:text-36 xl:text-48 font-bold tracking-tight dark:text-light-400">Комбинированный маникюр и дизайн ногтей</h3>
+          <div class="course-initial hidden lg:pr-36 md:pr-[84px] xl:pr-[120px]">
+            <ul class="text-content lg:mt-24 md:mt-32 xl:mt-36">
+              <li class="lg:text-18 md:text-20 xl:text-22 text-black-800 leading-tight dark:text-light-800">
+                <span class="lg:text-20 md:text-24 xl:text-28 text-black-900 font-bold leading-none dark:text-light-400">Срок обучения: </span>
                 32 академ. часа (1 месяц)
               </li>
-              <li class="lg:mt-16 mdx:mt-20 xl:mt-24 lg:text-18 mdx:text-20 xl:text-22 text-text-800 leading-tighter dark:text-light-800">
-                <span class="lg:text-20 mdx:text-24 xl:text-28 text-text-900 font-bold leading-none dark:text-light-400">Выдаваемый документ: </span>
+              <li class="lg:mt-16 md:mt-20 xl:mt-24 lg:text-18 md:text-20 xl:text-22 text-black-800 leading-tight dark:text-light-800">
+                <span class="lg:text-20 md:text-24 xl:text-28 text-black-900 font-bold leading-none dark:text-light-400">Выдаваемый документ: </span>
                 Сертификат
               </li>
-              <li class="lg:mt-16 mdx:mt-20 xl:mt-24 lg:text-18 mdx:text-20 xl:text-22 text-text-800 leading-tighter dark:text-light-800">
-                <span class="lg:text-20 mdx:text-24 xl:text-28 text-text-900 font-bold leading-none dark:text-light-400">Чему научитесь: </span>
+              <li class="lg:mt-16 md:mt-20 xl:mt-24 lg:text-18 md:text-20 xl:text-22 text-black-800 leading-tight dark:text-light-800">
+                <span class="lg:text-20 md:text-24 xl:text-28 text-black-900 font-bold leading-none dark:text-light-400">Чему научитесь: </span>
                 Выполнять комбинированный маникюр, техникам нанесения гель-лака, современным дизайнам ногтей
               </li>
-              <li class="lg:mt-16 mdx:mt-20 xl:mt-24 lg:text-18 mdx:text-20 xl:text-22 text-text-800 leading-tighter dark:text-light-800">
-                <span class="lg:text-20 mdx:text-24 xl:text-28 text-text-900 font-bold leading-none dark:text-light-400">Описание: </span>
+              <li class="lg:mt-16 md:mt-20 xl:mt-24 lg:text-18 md:text-20 xl:text-22 text-black-800 leading-tight dark:text-light-800">
+                <span class="lg:text-20 md:text-24 xl:text-28 text-black-900 font-bold leading-none dark:text-light-400">Описание: </span>
                 Программа позволит вам освоить комбинированный маникюр, сочетающий техники обрезного и аппаратного маникюра, работу по нанесению гель-лака, создание разных видов дизайна ногтей, методикам укрепления натуральных ногтей, приобретете навык умело фотографировать свои работы и др
               </li>
-              <li class="lg:mt-16 mdx:mt-20 xl:mt-24 lg:text-18 mdx:text-20 xl:text-22 text-text-800 leading-tighter dark:text-light-800">
-                <span class="lg:text-20 mdx:text-24 xl:text-28 text-text-900 font-bold leading-none dark:text-light-400">Стоимость: </span>
+              <li class="lg:mt-16 md:mt-20 xl:mt-24 lg:text-18 md:text-20 xl:text-22 text-black-800 leading-tight dark:text-light-800">
+                <span class="lg:text-20 md:text-24 xl:text-28 text-black-900 font-bold leading-none dark:text-light-400">Стоимость: </span>
                 5000 ₽
               </li>
             </ul>
-            <button class="lg:w-[206px] mdx:w-[255px] mt-24 mdx:mt-32 xl:mt-36 text-16 mdx:text-18 p-16 mdx:p-[23px] bg-brand-900 text-light-400 rounded-12 xl:rounded-16 cursor-pointer hover:shadow-btn">Записаться на курс</button>
+            <button class="lg:w-[206px] md:w-[255px] mt-24 md:mt-32 xl:mt-36 text-16 md:text-18 p-16 md:p-[23px] bg-brand-900 text-light-400 rounded-12 xl:rounded-16 cursor-pointer hover:shadow-btn">Записаться на курс</button>
           </div>
-          <div class="course-ordering lg:w-[304px] hidden">
+          <div class="course-ordering lg:w-2/3">
             <h3 class="lg:text-24 lg:mt-20 font-bold dark:text-light-400">Запись на курс</h3>
-            <p class="lg:text-16 lg:mt-8 leading-tighter text-text-800">Заполните все необходимые поля и отправьте заявку чтобы записаться на выбранный курс</p>
+            <p class="lg:text-16 lg:mt-8 leading-tight text-black-800">Заполните все необходимые поля и отправьте заявку чтобы записаться на выбранный курс</p>
             <form action="" class="w-full lg:mt-20">
               <label for="clientName" class="lg:text-18 font-bold">Ваше имя и фамилия</label>
-              <input type="text" id="clientName" class="input" placeholder="Иван Иванов" required>
+              <input type="text" id="clientName" class="w-full text-14 px-12 py-[12.5px] leading-normal xl:py-16 xl:text-16 mt-12 xl:mt-16 border outline-brand-900 outline-2 rounded-8 border-light-900 bg-light-700 placeholder:text-black-800" placeholder="Иван Иванов" required>
               <label for="clientPhone" class="lg:text-18 lg:mt-24 block font-bold">Ваш телефон</label>
-              <input type="text" id="clientPhone" class="input" placeholder="+7 900 900 90 90" required>
+              <input type="text" id="clientPhone" class="w-full text-14 px-12 py-[12.5px] leading-normal xl:py-16 xl:text-16 mt-12 xl:mt-16 border outline-brand-900 outline-2 rounded-8 border-light-900 bg-light-700" placeholder="+7 900 900 90 90" required>
               <div class="flex items-start lg:mt-16">
                 <input type="checkbox" name="agreement" id="agreement" class="form-checkbox lg:mt-[3px] lg:rounded-[4px] border-text-900 border-2" checked required>
-                <label for="agreement" class="lg:ml-8 lg:text-16 leading-tighter text-text-900 accent-brand-900">Я согласен на обработку моих личных данных</label>
+                <label for="agreement" class="lg:ml-8 lg:text-16 leading-tight text-black-900 accent-brand-900">Я согласен на обработку моих личных данных</label>
               </div>
-              <div class="flex mt-24 mdx:mt-32 xl:mt-36">
-                <button type="submit" class="lg:w-[206px] mdx:w-[255px] text-16 mdx:text-18 p-16 mdx:p-[23px] bg-brand-900 text-light-400 rounded-12 xl:rounded-16 cursor-pointer hover:shadow-btn">Записаться</button>
-                <button class="cancelOrdering text-16 lg:ml-12 mdx:text-18 p-16 mdx:p-[23px] font-bold" >Отмена</button>
+              <div class="flex mt-24 md:mt-32 xl:mt-36">
+                <button type="submit" class="lg:w-[206px] md:w-[255px] text-16 md:text-18 p-16 md:p-[23px] bg-brand-900 text-light-400 rounded-12 xl:rounded-16 cursor-pointer hover:shadow-btn">Записаться</button>
+                <button class="cancelOrdering text-16 lg:ml-12 md:text-18 p-16 md:p-[23px] font-bold" >Отмена</button>
               </div>
-              <p class="lg:mt-16 lg:text-12 text-text-800 leading-tighter">Все передаваемые вами данные <br> защищены по ФЗ № 152</p>
+              <p class="lg:mt-16 lg:text-12 text-black-800 leading-tight">Все передаваемые вами данные защищены по ФЗ № 152</p>
             </form>
           </div>
           <div class="course-ordering__succeed hidden">
-            <img class="lg:w-[265px] mdx:w-[290px] xl:w-[320px] lg:h-[265px] mdx:h-[290px] xl:h-[320px] lg:mt-48 mdx:mt-[56px] xl:mt-64 dark:brightness-90" src="/src/img/landing/illustrations/order-success.svg" alt="Order success">
+            <img class="lg:w-[265px] md:w-[290px] xl:w-[320px] lg:h-[265px] md:h-[290px] xl:h-[320px] lg:mt-48 md:mt-[56px] xl:mt-64 dark:brightness-90" src="/src/img/landing/illustrations/order-success.svg" alt="Order success">
             <div class="lg:mt-32">
-              <h4 class="lg:text-24 mdx:text-28 xl:text-32 font-bold text-text-900 dark:text-light-400">Вы успешно записались!</h4>
-              <p class="lg:mt-8 mdx:mt-12 lg:text-16 mdx:text-18 xl:text-20 text-text-800 leading-tighter dark:text-light-800">Скоро мы свяжемся с вами по  указанному <br> телефону и обсудим детали</p>
+              <h4 class="lg:text-24 md:text-28 xl:text-32 font-bold text-black-900 dark:text-light-400">Вы успешно записались!</h4>
+              <p class="lg:mt-8 md:mt-12 lg:text-16 md:text-18 xl:text-20 text-black-800 leading-tight dark:text-light-800">Скоро мы свяжемся с вами по  указанному <br> телефону и обсудим детали</p>
             </div>
-            <button class="btn-primary lg:w-[206px] lg:mt-24 mdx:mt-[28px] xl:mt-36 lg:py-16 mdx:py-[20px] mdx:text-16">Спасибо!</button>
+            <button class="btn-primary lg:w-[206px] lg:mt-24 md:mt-[28px] xl:mt-36 lg:py-16 md:py-[20px] md:text-16">Спасибо!</button>
           </div>
           <div class="course-ordering__error hidden">
-            <img class="lg:w-[265px] mdx:w-[290px] xl:w-[320px] lg:h-[265px] mdx:h-[290px] xl:h-[320px] lg:mt-48 mdx:mt-[56px] xl:mt-64 dark:brightness-90" src="/src/img/landing/illustrations/order-error.svg" alt="Order success">
+            <img class="lg:w-[265px] md:w-[290px] xl:w-[320px] lg:h-[265px] md:h-[290px] xl:h-[320px] lg:mt-48 md:mt-[56px] xl:mt-64 dark:brightness-90" src="/src/img/landing/illustrations/order-error.svg" alt="Order success">
             <div class="lg:mt-32">
-              <h4 class="lg:text-24 mdx:text-28 xl:text-32 font-bold text-text-900 dark:text-light-400">Ой! Что-то пошло не так</h4>
-              <p class="lg:mt-8 mdx:mt-12 lg:text-16 mdx:text-18 xl:text-20 text-text-800 leading-tighter dark:text-light-800">Повторите попытку или сообщите нам об этом</p>
+              <h4 class="lg:text-24 md:text-28 xl:text-32 font-bold text-black-900 dark:text-light-400">Ой! Что-то пошло не так</h4>
+              <p class="lg:mt-8 md:mt-12 lg:text-16 md:text-18 xl:text-20 text-black-800 leading-tight dark:text-light-800">Повторите попытку или сообщите нам об этом</p>
             </div>
-            <button class="btn-primary lg:w-[206px] lg:mt-24 mdx:mt-[28px] xl:mt-36 lg:py-16 mdx:py-[20px] mdx:text-16">Сообщить</button>
+            <button class="btn-primary lg:w-[206px] lg:mt-24 md:mt-[28px] xl:mt-36 lg:py-16 md:py-[20px] md:text-16">Сообщить</button>
           </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="w-full flex lg:items-center lg:justify-between lg:mt-36 mdx:mt-48 lg:p-24 xl:px-32 xl:py-36 lg:rounded-28 mdx:rounded-32 bg-brand-900 dark:bg-dark-800">
-      <div class="lg:w-[350px] mdx:w-[390px] xl:w-[436px]">
+    <div class="w-full flex lg:items-center lg:justify-between lg:mt-36 md:mt-48 lg:p-24 xl:px-32 xl:py-36 lg:rounded-28 md:rounded-32 bg-brand-900 dark:bg-dark-800">
+      <div class="lg:w-[350px] md:w-[390px] xl:w-[436px]">
         <h4 class="lg:text-24 xl:text-32 text-light-400 font-bold dark:text-light-400">Не можете выбрать курс?</h4>
-        <p class="lg:mt-12 lg:text-16 mdx:text-18 xl:text-20 leading-tighter text-light-400 dark:text-light-800">Оставьте заявку на обратный звонок. <br> 
+        <p class="lg:mt-12 lg:text-16 md:text-18 xl:text-20 leading-tight text-light-400 dark:text-light-800">Оставьте заявку на обратный звонок. <br> 
           Мы свяжемся с вами в ближайшее время 
           и поможем в выборе курса или программы</p>
       </div>
@@ -246,23 +216,23 @@
         <ul class="flex lg:items-center">
           <li class="lg:w-[240px] lg:mr-32 xl:mr-36 flex flex-col">
             <label class="lg:text-18 xl:text-22 text-light-400" for="helperClientName">Ваше имя и фамилия</label>
-            <input class="lg:mt-12 xl:mt-16 lg:px-12 mdx:px-16 lg:py-[10px] mdx:py-[14px] lg:text-16  bg-brand-900 text-light-400  border-2 border-light-400 focus:border-light-400 lg:rounded-10 mdx:rounded-16 placeholder:text-light-900 dark:bg-dark-800" type="text" name="helperClientName" id="helperClientName" placeholder="Иван Иванов" required>
+            <input class="lg:mt-12 xl:mt-16 lg:px-12 md:px-16 lg:py-[10px] md:py-[14px] lg:text-16  bg-brand-900 text-light-400  border-2 border-light-400 focus:border-light-400 lg:rounded-10 md:rounded-16 placeholder:text-light-900 dark:bg-dark-800" type="text" name="helperClientName" id="helperClientName" placeholder="Иван Иванов" required>
           </li>
           <li class="lg:w-[240px] lg:mr-32 xl:mr-36 flex flex-col">
             <label class="lg:text-18 xl:text-22 text-light-400" for="helperClientPhone">Ваш телефон</label>
-            <input class="lg:mt-12 xl:mt-16 lg:px-12 mdx:px-16 lg:py-[10px] mdx:py-[14px]  bg-brand-900 text-light-400 border-2 border-light-400 focus:border-light-400 lg:rounded-10 mdx:rounded-16 placeholder:text-light-900 dark:bg-dark-800" type="tel" name="helperClientPhone" id="helperClientPhone" placeholder="+7 900 900 90 90" required>
+            <input class="lg:mt-12 xl:mt-16 lg:px-12 md:px-16 lg:py-[10px] md:py-[14px]  bg-brand-900 text-light-400 border-2 border-light-400 focus:border-light-400 lg:rounded-10 md:rounded-16 placeholder:text-light-900 dark:bg-dark-800" type="tel" name="helperClientPhone" id="helperClientPhone" placeholder="+7 900 900 90 90" required>
           </li>
           <li class="self-end">
-            <button class="lg:px-24 mdx:px-32 lg:py-16 mdx:py-20 bg-light-400 text-text-900 lg:rounded-10 mdx:rounded-16 hover:bg-brand-900 hover:outline hover:outline-2 hover:outline-light-400 hover:text-light-400 dark:bg-brand-900 dark:text-light-400 dark:hover:shadow-btn dark:hover:outline-none" type="submit">Позвоните мне</button>
+            <button class="lg:px-24 md:px-32 lg:py-16 md:py-20 bg-light-400 text-black-900 lg:rounded-10 md:rounded-16 hover:bg-brand-900 hover:outline hover:outline-2 hover:outline-light-400 hover:text-light-400 dark:bg-brand-900 dark:text-light-400 dark:hover:shadow-btn dark:hover:outline-none" type="submit">Позвоните мне</button>
           </li>
         </ul>
-        <div class="flex lg:items-center xl:items-start lg:mt-12 mdx:mt-16">
+        <div class="flex lg:items-center xl:items-start lg:mt-12 md:mt-16">
           <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-20 lg:h-20" viewBox="0 0 20 20" fill="none">
             <path d="M9.99996 18.3334C14.6023 18.3334 18.3333 14.6025 18.3333 10.0001C18.3333 5.39771 14.6023 1.66675 9.99996 1.66675C5.39759 1.66675 1.66663 5.39771 1.66663 10.0001C1.66663 14.6025 5.39759 18.3334 9.99996 18.3334Z" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M10 6.66675V10.0001" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M10 13.3333H10.0083" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <p class="lg:ml-8 mdx:ml-12 lg:text-14 xl:text-16 text-light-400 xl:leading-tight tracking-wide">Отправляя данную форму вы автоматически согласны на обработку <br class="hidden xl:inline-block"> персональных данных</p>
+          <p class="lg:ml-8 md:ml-12 lg:text-14 xl:text-16 text-light-400 xl:leading-tight tracking-wide">Отправляя данную форму вы автоматически согласны на обработку <br class="hidden xl:inline-block"> персональных данных</p>
         </div>
       </form>
     </div>
